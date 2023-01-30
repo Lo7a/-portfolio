@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
+    <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center  ">
       <motion.div
         initial={{
           x: -500,
@@ -24,7 +24,6 @@ export default function Header({}: Props) {
         }}
         className=" flex flex-row items-center"
       >
-        {/* Social Icons */}
         <SocialIcon
           url="https://www.facebook.com/LahavKlugman7"
           fgColor="gray"
@@ -40,6 +39,14 @@ export default function Header({}: Props) {
           fgColor="gray"
           bgColor="transparent"
         />
+        <a
+          href="lahav-cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" cursor-pointer p-3  uppercase md:inline-flex text-md text-gray-400"
+        >
+          RESUME
+        </a>
       </motion.div>
 
       <Link href="#contact">
@@ -59,15 +66,15 @@ export default function Header({}: Props) {
           }}
           className=" flex flex-row items-center text-gray-300 cursor-pointer"
         >
+          <p className="p-3 uppercase  hidden md:inline-flex text-md text-gray-400">
+            Get In Touch
+          </p>
           <SocialIcon
-            className="cursor-pointer"
+            className="cursor-pointer mr-10"
             network="email"
             fgColor="gray"
             bgColor="transparent"
           ></SocialIcon>
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 ">
-            Get In Touch
-          </p>
         </motion.div>
       </Link>
     </header>

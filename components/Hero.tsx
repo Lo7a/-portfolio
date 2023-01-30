@@ -33,14 +33,14 @@ export default function Hero({}: Props) {
       </motion.div>
 
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px]">
+        <h2 className="text-md uppercase text-gray-500 pb-2 tracking-[6px]">
           Software Engineer Student
         </h2>
         <h1 className="text-xl lg:text-2xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-2">
+        <div className="pt-2 font-normal">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion } from "framer-motion";
@@ -5,7 +7,21 @@ import { motion } from "framer-motion";
 type Props = {};
 
 function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+  const projects = [
+    {
+      name: "Airbnb Clone",
+      src: "./pro-4.png",
+      text: "An Airbnb Clone with calendar and serch option.",
+      imgs: ["./react.png", "./nextjs.png", "./tailwind.png"],
+    },
+    {
+      name: "Roll The Dice Game",
+      src: "./pro-2.png",
+      text: "loren impson2",
+      imgs: [],
+    },
+    { name: "my 3", src: "./pro-1.png", text: "loren impson3", imgs: [] },
+  ];
   const length = projects.length;
   return (
     <motion.div
@@ -22,30 +38,36 @@ function Projects({}: Props) {
         className=" relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
 rollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50  hover:scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin"
       >
-        {projects.map((projects, i) => (
+        {projects.map((project, i) => (
           // eslint-disable-next-line react/jsx-key
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-2 items-center justify-center p-20 md:p-10  h-screen ">
+          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-0 items-center justify-center p-20 md:p-10  h-screen ">
             <motion.img
-              className="md:w-[500px] md:h-[420px]  w-[320px] h-[260px]"
-              initial={{ y: -300, opacity: 0 }}
+              className="lg:w-[560px] lg:h-[440px] w-[380px] h-[320px]"
+              initial={{ y: -250, opacity: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              src="/pro-1.png"
+              src={project.src}
               alt=""
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl ">
-              <h4 className="text-4xl font-semibold text-center ">
-                <span className="underline decoration-[#F7AB0A]/50 ">
-                  Case Study {i + 1} of {length}
+            <div className="space-y-2 px-0 md:px-10 max-w-6xl ">
+              <div className="p-5 flex items-center justify-center space-x-10">
+                {project.imgs.map((img) => (
+                  <img
+                    className=" lg:h-16 lg:w-16 h-12 w-12 rounded-full filter "
+                    src={img}
+                  />
+                ))}
+              </div>
+              <h4 className="text-xl md:text-2xl font-semibold text-center">
+                Project {i + 1} of {length}:&nbsp;
+                <span className="underline text-[#F7AB0A] decoration-[#F7AB0A]/50 ">
+                  {project.name}
                 </span>
-                : Roll The Dice Game
               </h4>
-              <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut \
-                sse cillum dolore eu fugiat sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+
+              <p className="text-xl text-center md:text-left ">
+                {project.text}
               </p>
             </div>
           </div>
@@ -53,7 +75,7 @@ rollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/50  hover:scrollbar-thumb-[#
         ;
       </div>
 
-      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
+      <div className="w-full absolute top-[20%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12"></div>
     </motion.div>
   );
 }

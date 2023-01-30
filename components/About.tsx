@@ -21,17 +21,17 @@ function About({}: Props) {
         viewport={{ once: true }}
         transition={{ duration: 1.2 }}
         src="7.jpg"
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] "
+        className="-mb-40 md:mb-0 flex-shrink-0 w-52 h-72 object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] "
       />
-      <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+      <div className="space-y-5 px-0 md:px-10">
+        <h4 className="md:text-4xl text-2xl font-semibold">
           Here is a{" "}
           <span className="underline text-2xl decoration-[#F7AB0A]/50 hover:duration-100 hover:text-6xl hover:text-[#F7AB0A] hover:animate-pulse">
             little
           </span>{" "}
           background
         </h4>
-        <p className="text-base ">
+        <p className="text-md md:text-lg ">
           My name is Lahav klugman I'm a second-year Software Engineer student
           at the Open University, and I am a Junior Web Developer. I am an
           accomplished coder and programmer, and I enjoy using my skills to
