@@ -22,12 +22,12 @@ function ContactMe({}: Props) {
       <h3 className=" absolute top-24 uppercase tracking-[10px] text-gray-500 text-2xl">
         Contact Me
       </h3>
-      <div className="flex flex-col space-y-16">
-        <h4 className="text-2xl md:text-4xl font-semibold text-center ">
+      <div className="flex flex-col space-y-12">
+        <h4 className="text-lg md:text-2xl font-semibold text-center ">
           I have got just what you need<span>. </span>
           <span className="underline decoration-[#F7AB0A]/50">Lets Talk.</span>
         </h4>
-        <div className="space-y-10">
+        <div className="space-y-10 ">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-xl md:text-2xl">054-3032273</p>
@@ -43,13 +43,13 @@ function ContactMe({}: Props) {
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 min-w-fit mx-auto "
+          className="w-full sm:w-32 flex flex-col space-y-2 min-w-fit mx-auto "
         >
           <div className="flex space-x-2 ">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-full "
               type="text"
             />
             <input

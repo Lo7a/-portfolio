@@ -32,26 +32,26 @@ export default function Hero({}: Props) {
         />
       </motion.div>
 
-      <div className="z-20">
-        <h2 className="text-md uppercase text-gray-500 pb-2 tracking-[6px]">
+      <div className=" z-20">
+        <h2 className=" text-xs md:text-md uppercase text-gray-500 pb-2 tracking-[3px] md:tracking-[6px]">
           Software Engineer Student
         </h2>
-        <h1 className="text-xl lg:text-2xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
+        <h1 className="text-xs md:text-xl lg:text-2xl font-semibold px-10">
+          <span className="mr-0 md:mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-2 font-normal">
+        <div className="mt-20 md:mt-2 font-normal">
           <Link href="#about">
-            <button className="heroButton">About</button>
+            <button className="heroButton md:text-base">About</button>
           </Link>
           <Link href="#skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton md:text-base">Skills</button>
           </Link>
           <Link href="#projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton md:text-base">Projects</button>
           </Link>
           <Link href="#contact">
-            <button className="heroButton">Contact Me</button>
+            <button className="heroButton md:text-base">Contact Me</button>
           </Link>
         </div>
       </div>

@@ -21,6 +21,12 @@ function Projects({}: Props) {
       imgs: [],
     },
     { name: "my 3", src: "./pro-1.png", text: "loren impson3", imgs: [] },
+    {
+      name: "Simon's Game",
+      src: "./sim.png",
+      text: "loren impson2",
+      imgs: ["./html.png", "./css.png", "./jquery.png"],
+    },
   ];
   const length = projects.length;
   return (
